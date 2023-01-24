@@ -1,16 +1,11 @@
 import TokamakDOM
+import Foundation
 
 @main
 struct DnDBuilderApp: App {
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			SetupCharacterView()
 		}
-	}
-}
-
-struct ContentView: View {
-	var body: some View {
-		Text("Hello, world!")
 	}
 }
