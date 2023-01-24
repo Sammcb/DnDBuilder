@@ -35,11 +35,18 @@ init() {
 }
 
 run() {
-	carton dev -h 0.0.0.0
+	carton dev -h 0.0.0.0 --verbose
 }
 
 build() {
 	carton bundle
+}
+
+project_clean() {
+	rm -rf Bundle
+	rm -rf .build
+	rm -rf .swiftpm
+	rm -f Package.resolved
 }
 
 if [ ${1:+x} ]; then
